@@ -1,6 +1,6 @@
 <template>
     <div class="w-3/4 mx-auto">
-        <NavLink :href="route('chats.index')">Chats</NavLink>
+        <NavLink class="no-underline hover:no-underline text-xl text-white hover:bg-sky-400 hover:text-white border-none hover:border-none px-3 py-2" :href="route('chats.index')">Chats</NavLink>
         <slot />
     </div>
 </template>

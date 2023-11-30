@@ -32,6 +32,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::resource('chats', \App\Http\Controllers\Chat\ChatController::class);
 
+    Route::post('/messages', \App\Http\Controllers\Message\StoreController::class)->name('messages.store');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
